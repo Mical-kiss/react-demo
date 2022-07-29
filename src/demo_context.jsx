@@ -16,14 +16,14 @@ function App() {
         <B>
           我是内容
           <div>我是div<span>我是span</span></div>
-          <C></C>
         </B>
+        <C></C>
       </MyContext.Provider>
     </div>
   );
 }
 function B(props) {
-  const { userName, changeName } = (useContext(MyContext))
+  const { userName, changeName } = useContext(MyContext)
   console.log(Array.isArray(props.children), React.Children.toArray(props.children))
   console.log(Object.prototype.toString.call(props.children), props.children.sort)
   return <div className="child">
@@ -32,8 +32,9 @@ function B(props) {
   </div>
 }
 function C() {
+  const { userName } = useContext(MyContext)
   return (
-    <div>我是c组件</div>
+    <div>我是c组件，我接受到的context数据是：{userName}</div>
   )
 }
 
