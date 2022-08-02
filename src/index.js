@@ -2,20 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+import reportWebVitals from './reportWebVitals';
+
 /* react-router */
 // import App from './demo_context';
 // import { BrowserRouter } from 'react-router-dom';
 
-import reportWebVitals from './reportWebVitals';
-
 /* redux */
-// import App from './demo_redux1'
-// import store from './redux/store'
+import App from './demo_redux1'
+import store from './redux/store'
 
 /* react-redux */
-import { Provider } from 'react-redux'
-import App from './demo_redux2'
-import store from './react-redux/store'
+// import { Provider } from 'react-redux'
+// import App from './demo_redux2'
+// import store from './react-redux/store'
+
+/* self-hook */
+// import App from './demo_selfHook'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,19 +26,19 @@ root.render(
     {/* <BrowserRouter>
       <App />
     </BrowserRouter> */}
-    <Provider store={store}>
+    {/* <Provider store={store}>
       <App></App>
-    </Provider>
-    {/* <App></App> */}
+    </Provider> */}
+    <App></App>
   </>
 );
 
-/* store.subscribe(() => {
+store.subscribe(() => {
   root.render(
     <>
       <App></App>
     </>
   );
-}) */
+})
 
 reportWebVitals();
