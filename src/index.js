@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+import reportWebVitals from './reportWebVitals';
+
 /* react-router */
 // import App from './demo_context';
 // import { BrowserRouter } from 'react-router-dom';
 
-import reportWebVitals from './reportWebVitals';
-
 /* redux */
-// import App from './demo_redux1'
-// import store from './redux/store'
+import App from './demo_redux1'
+import store from './redux/store'
 
 /* react-redux */
 // import { Provider } from 'react-redux'
@@ -18,10 +18,12 @@ import reportWebVitals from './reportWebVitals';
 // import store from './react-redux/store'
 
 /* useCallback */
-import App from './demo_useCallback'
+// import App from './demo_useCallback'
 
 /* scopeSlot */
 // import App from './demo_scopeSlot'
+/* self-hook */
+// import App from './demo_selfHook'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,12 +38,12 @@ root.render(
   </>
 );
 
-/* store.subscribe(() => {
+store.subscribe(() => {
   root.render(
     <>
       <App></App>
     </>
   );
-}) */
+})
 
 reportWebVitals();
