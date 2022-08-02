@@ -13,9 +13,15 @@ import reportWebVitals from './reportWebVitals';
 // import store from './redux/store'
 
 /* react-redux */
-import { Provider } from 'react-redux'
-import App from './demo_redux2'
-import store from './react-redux/store'
+// import { Provider } from 'react-redux'
+// import App from './demo_redux2'
+// import store from './react-redux/store'
+
+/* useCallback */
+import App from './demo_useCallback'
+
+/* scopeSlot */
+// import App from './demo_scopeSlot'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,10 +29,10 @@ root.render(
     {/* <BrowserRouter>
       <App />
     </BrowserRouter> */}
-    <Provider store={store}>
+    {/* <Provider store={store}>
       <App></App>
-    </Provider>
-    {/* <App></App> */}
+    </Provider> */}
+    <App></App>
   </>
 );
 

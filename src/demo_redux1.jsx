@@ -7,11 +7,11 @@ export default function Counter() {
   return (
     <div>
       <div>
-        <span>{ store.getState() }</span>
+        <span>{ store.getState().counterReducer }</span>
         <button
-          onClick={() => { store.dispatch(createIncrementAction()) }}
+          onClick={() => { console.log(store.dispatch(createIncrementAction()), 111) }}
         >
-          Increment
+          Increment111
         </button>
         <button
           onClick={() => { store.dispatch(createDecrementAction()) }}
@@ -19,7 +19,7 @@ export default function Counter() {
           Decrement
         </button>
         <button
-          onClick={() => { store.dispatch(createIncrementAsyncAction(1000)) }}
+          onClick={() => { console.log(store.dispatch(createIncrementAsyncAction(1000)), 222) }}
         >
           IncrementASync
         </button>
