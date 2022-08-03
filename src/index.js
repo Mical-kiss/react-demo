@@ -17,6 +17,11 @@ import store from './redux/store'
 // import App from './demo_redux2'
 // import store from './react-redux/store'
 
+/* useCallback */
+// import App from './demo_useCallback'
+
+/* scopeSlot */
+// import App from './demo_scopeSlot'
 /* self-hook */
 // import App from './demo_selfHook'
 
